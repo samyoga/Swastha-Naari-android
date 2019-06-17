@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/TextViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/feedbacktitle"
+            android:textSize="15pt"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/colorDark"/>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="36dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center"
+            android:layout_below="@id/TextViewTitle"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorSilver"/>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divider"
+            android:layout_marginTop="40dp"
+            android:text="Name"
+            android:textStyle="bold"
+            android:textSize="8pt"
+            android:textColor="@color/colorDark"
+            android:layout_marginLeft="8pt"/>
+
+        <EditText
+            android:id="@+id/EditTextName"
+            android:hint="@string/feedbackname"
+            android:inputType="textPersonName"
+            android:layout_width="320dp"
+            android:layout_gravity="center"
+            android:layout_height="46dp"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/name"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingLeft="6dp"
+            android:background="@drawable/border"
+             />
+
+        <TextView
+            android:id="@+id/age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/EditTextName"
+            android:layout_marginTop="40dp"
+            android:text="Age in years"
+            android:textStyle="bold"
+            android:textSize="8pt"
+            android:textColor="@color/colorDark"
+            android:layout_marginLeft="8pt"/>
+
+        <EditText
+            android:id="@+id/EditTextAge"
+            android:hint="@string/feedbackage"
+            android:inputType="number"
+            android:layout_width="320dp"
+            android:layout_gravity="center"
+            android:layout_height="46dp"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/age"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:paddingStart="20dp"
+            android:paddingLeft="6dp"
+            android:background="@drawable/border"
+            />
+
+        <TextView
+            android:id="@+id/guardian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/EditTextAge"
+            android:layout_marginTop="40dp"
+            android:text="Guardian's Name"
+            android:textStyle="bold"
+            android:textSize="8pt"
+            android:textColor="@color/colorDark"
+            android:layout_marginLeft="8pt"/>
+
+        <EditText
+            android:id="@+id/GuardianName"
+            android:hint="@string/guardianname"
+            android:inputType="textPersonName"
+            android:layout_below="@id/guardian"
+            android:layout_width="320dp"
+            android:layout_gravity="center"
+            android:layout_height="46dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:paddingStart="20dp"
+            android:paddingLeft="6dp"
+            android:background="@drawable/border"
+            />
+
+        <TextView
+            android:id="@+id/bloodpressure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/GuardianName"
+            android:layout_marginTop="40dp"
+            android:text="Blood Pressure"
+            android:textStyle="bold"
+            android:textSize="8pt"
+            android:textColor="@color/colorDark"
+            android:layout_marginLeft="8pt"/>
+
+        <EditText
+            android:id="@+id/BloodPressure"
+            android:hint="@string/bloodpressure"
+            android:inputType="textPersonName"
+            android:layout_width="320dp"
+            android:layout_gravity="center"
+            android:layout_height="46dp"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/bloodpressure"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:paddingStart="20dp"
+            android:paddingLeft="6dp"
+            android:background="@drawable/border"
+            />
+
+        <TextView
+            android:id="@+id/weightofperson"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/BloodPressure"
+            android:layout_marginTop="40dp"
+            android:text="Weight"
+            android:textStyle="bold"
+            android:textSize="8pt"
+            android:textColor="@color/colorDark"
+            android:layout_marginLeft="8pt"/>
+
+        <EditText
+            android:id="@+id/weight"
+            android:hint="@string/weight"
+            android:inputType="number"
+            android:layout_width="320dp"
+            android:layout_gravity="center"
+            android:layout_height="46dp"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/weight"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:paddingStart="20dp"
+            android:paddingLeft="6dp"
+            android:background="@drawable/border"/>
+
+        <TextView
+            android:id="@+id/historyofreport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/weight"
+            android:layout_marginTop="40dp"
+            android:text="History"
+            android:textStyle="bold"
+            android:textSize="8pt"
+            android:textColor="@color/colorDark"
+            android:layout_marginLeft="8pt"/>
+
+        <EditText
+            android:id="@+id/History"
+            android:hint="@string/history"
+            android:inputType="textMultiLine"
+            android:lines="5"
+            android:layout_width="320dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/historyofreport"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:paddingStart="20dp"
+            android:paddingLeft="6dp"
+            android:background="@drawable/border"/>
+
+        <TextView
+            android:id="@+id/medicalreport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/History"
+            android:layout_marginTop="40dp"
+            android:text="Other Medical Report"
+            android:textStyle="bold"
+            android:textSize="8pt"
+            android:textColor="@color/colorDark"
+            android:layout_marginLeft="8pt"/>
+
+
+        <EditText
+            android:id="@+id/OtherMedicalReport"
+            android:hint="@string/otherreport"
+            android:inputType="textMultiLine"
+            android:lines="5"
+            android:layout_width="320dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/medicalreport"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:paddingStart="20dp"
+            android:paddingLeft="6dp"
+            android:background="@drawable/border"/>
+
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_height="wrap_content"
+            android:layout_width="320dp"
+            android:layout_below="@id/OtherMedicalReport"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/circular_edge_button"
+            android:text="Submit"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16dp"/>
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

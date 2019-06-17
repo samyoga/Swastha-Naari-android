@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Swastha-Naari</string>
+    <string name="feedbacktitle">Data Collection</string>
+    <string name="feedbackname">नाम</string>
+    <string name="feedbackage">Age in years</string>
+    <string name="guardianname">Guardian\'s Name</string>
+    <string name="bloodpressure">Blood Pressure</string>
+    <string name="weight">Weight in kg</string>
+    <string name="history">History</string>
+    <string name="otherreport">Other Medical Report</string>
 </resources>
