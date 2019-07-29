@@ -2,10 +2,10 @@
     <string name="app_name">Swastha-Naari</string>
     <string name="feedbacktitle">Data Collection</string>
     <string name="feedbackname">नाम</string>
-    <string name="feedbackage">Age in years</string>
-    <string name="guardianname">Guardian\'s Name</string>
-    <string name="bloodpressure">Blood Pressure</string>
-    <string name="weight">Weight in kg</string>
-    <string name="history">History</string>
-    <string name="otherreport">Other Medical Report</string>
+    <string name="feedbackage">उमेर</string>
+    <string name="guardianname">अभिभावकको नाम</string>
+    <string name="bloodpressure">रक्तचाप</string>
+    <string name="weight">तौल</string>
+    <string name="history">पहिला भएको समस्या</string>
+    <string name="otherreport">अन्य रोग वा सोही जाँचको विवरण</string>
 </resources>
