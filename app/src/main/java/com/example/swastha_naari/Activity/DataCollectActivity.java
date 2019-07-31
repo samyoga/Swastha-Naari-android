@@ -94,5 +94,6 @@ public class DataCollectActivity extends AppCompatActivity {
     protected void onDestroy(){
         super.onDestroy();
         realm.close();
+        Realm.deleteRealm(realm.getConfiguration());
     }
 }
