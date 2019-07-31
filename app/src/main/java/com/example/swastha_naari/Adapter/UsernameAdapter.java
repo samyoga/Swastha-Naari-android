@@ -2,6 +2,7 @@ package com.example.swastha_naari.Adapter;
 
 import android.app.Activity;
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,31 +20,27 @@ import java.util.ArrayList;
 
 import io.realm.OrderedRealmCollection;
 
-public class FormAdapter extends RecyclerView.Adapter<FormAdapter.ViewHolder> {
+public class UsernameAdapter extends RecyclerView.Adapter<UsernameAdapter.ViewHolder> {
     Context context;
     ArrayList<FormModel> arrayList;
 
-    public FormAdapter(Context c, ArrayList<FormModel> data) {
+    public UsernameAdapter(Context c,  ArrayList<FormModel> data) {
         this.context = c;
         this.arrayList = data;
     }
 
+
+
     @NonNull
     @Override
-    public FormAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public UsernameAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         return new ViewHolder(LayoutInflater.from(context).inflate(R.layout.form_data_cardview, parent, false));
     }
 
     @Override
-    public void onBindViewHolder(@NonNull FormAdapter.ViewHolder holder, final int position) {
-//        holder.username.setText("Record: "  + arrayList.get(position).getName() );
-        holder.mName.setText(arrayList.get(position).getName());
-        holder.mAge.setText(arrayList.get(position).getAge());
-        holder.mGuardianName.setText(arrayList.get(position).getGuardianName());
-        holder.mBloodPressure.setText(arrayList.get(position).getBloodPressure());
-        holder.mWeight.setText(arrayList.get(position).getWeight());
-        holder.mHistory.setText(arrayList.get(position).getHistory());
-        holder.mOtherMedicalReport.setText(arrayList.get(position).getMedicalReport());
+    public void onBindViewHolder(@NonNull UsernameAdapter.ViewHolder holder, final int position) {
+        holder.mName.setText("Record of" + " "+ arrayList.get(position).getName());
+//        holder.mAge.setVisibility(View.GONE);
     }
 
     @Override

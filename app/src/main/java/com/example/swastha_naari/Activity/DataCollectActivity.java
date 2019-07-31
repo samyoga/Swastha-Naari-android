@@ -84,7 +84,6 @@ public class DataCollectActivity extends AppCompatActivity {
         formModel.setWeight(Weight);
         formModel.setHistory(History);
         formModel.setMedicalReport(MedicalReport);
-        realm.deleteAll();
         realm.commitTransaction();
 
         Intent intent = new Intent(DataCollectActivity.this, MainActivity.class);

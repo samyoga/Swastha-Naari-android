@@ -30,7 +30,8 @@
             android:textColor="@color/colorDark"
             android:textStyle="bold"
             android:textSize="18sp"
-            android:layout_marginStart="10dp" />
+            android:layout_marginStart="10dp"
+            android:visibility="visible"/>
 
         <TextView
             android:id="@+id/cvAge"
@@ -42,7 +43,8 @@
             android:textColor="@color/colorDark"
             android:textStyle="bold"
             android:textSize="18sp"
-            android:layout_marginStart="10dp" />
+            android:layout_marginStart="10dp"
+            android:visibility="gone"/>
 
         <TextView
             android:id="@+id/cvGuardianName"
@@ -54,7 +56,8 @@
             android:textColor="@color/colorDark"
             android:textStyle="bold"
             android:textSize="18sp"
-            android:layout_marginStart="10dp" />
+            android:layout_marginStart="10dp"
+            android:visibility="gone"/>
 
         <TextView
             android:id="@+id/cvBloodPressure"
@@ -66,7 +69,8 @@
             android:textColor="@color/colorDark"
             android:textStyle="bold"
             android:textSize="18sp"
-            android:layout_marginStart="10dp" />
+            android:layout_marginStart="10dp"
+            android:visibility="gone"/>
 
         <TextView
             android:id="@+id/cvWeight"
@@ -78,7 +82,8 @@
             android:textColor="@color/colorDark"
             android:textStyle="bold"
             android:textSize="18sp"
-            android:layout_marginStart="10dp" />
+            android:layout_marginStart="10dp"
+            android:visibility="gone"/>
 
         <TextView
             android:id="@+id/cvHistory"
@@ -90,7 +95,8 @@
             android:textColor="@color/colorDark"
             android:textStyle="bold"
             android:textSize="18sp"
-            android:layout_marginStart="10dp" />
+            android:layout_marginStart="10dp"
+            android:visibility="gone"/>
 
         <TextView
             android:id="@+id/cvOtherMedicalReport"
@@ -102,7 +108,8 @@
             android:textColor="@color/colorDark"
             android:textStyle="bold"
             android:textSize="18sp"
-            android:layout_marginStart="10dp" />
+            android:layout_marginStart="10dp"
+            android:visibility="gone"/>
 
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

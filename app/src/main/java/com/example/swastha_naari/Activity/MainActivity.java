@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         report.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, ViewDataActivity.class);
+                Intent intent = new Intent(MainActivity.this, DatabyUsernameActivity.class);
                 startActivity(intent);
             }
         });

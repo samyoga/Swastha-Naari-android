@@ -3,6 +3,8 @@ package com.example.swastha_naari.Models;
 import io.realm.RealmObject;
 
 public class FormModel extends RealmObject {
+
+//    Integer id;
     String Name;
     String Age;
     String GuardianName;
@@ -10,6 +12,14 @@ public class FormModel extends RealmObject {
     String Weight;
     String History;
     String MedicalReport;
+
+//    public Integer getId() {
+//        return id;
+//    }
+//
+//    public void setId(Integer id) {
+//        this.id = id;
+//    }
 
     public String getName() {
         return Name;
