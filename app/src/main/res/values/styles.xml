@@ -8,4 +8,10 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="AppTheme.Dark.Dialog" parent="Theme.AppCompat.Dialog">
+        <item name="colorAccent">@color/textColor</item>
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:background">@color/colorWhiteSmoke</item>
+    </style>
+
 </resources>

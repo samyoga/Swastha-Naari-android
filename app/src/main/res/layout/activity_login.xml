@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:background="@color/colorPrimary"
+    tools:context=".Activity.MainActivity">
+
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Swastha"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorDark"
+        android:textSize="32dp"
+        android:clickable="true"/>
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Naari"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        android:layout_below="@id/text1"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorDark"
+        android:textSize="32dp"/>
+
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="सबैको जिम्मेवारी "
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/text2"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorGrey"
+        android:textSize="20dp"/>
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher"
+        android:layout_below="@id/text3"
+        android:layout_marginTop="20dp"/>
+
+
+
+    <EditText
+        android:id="@+id/usernameid"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/logo"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/border"
+        android:hint="Username"
+        android:paddingLeft="6dp" />
+
+
+
+    <EditText
+
+        android:id="@+id/passwordid"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_below="@+id/usernameid"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/border"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingLeft="6dp" />
+
+
+
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="36dp"
+        android:layout_height="4dp"
+        android:layout_below="@id/passwordid"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="56dp"
+        android:background="@color/colorSilver" />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/divider"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/circular_edge_button"
+        android:text="LOGIN"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/signUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="No account? Sign up" />
+
+    <TextView
+        android:id="@+id/log"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+</RelativeLayout>

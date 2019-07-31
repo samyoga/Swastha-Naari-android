@@ -8,5 +8,6 @@
     <color name="colorWhiteSmoke">#F5F5F5</color>
     <color name="colorGrey">#696969</color>
     <color name="colorSilver">#C0C0C0</color>
+    <color name="textColor">#000000</color>
 </resources>
 

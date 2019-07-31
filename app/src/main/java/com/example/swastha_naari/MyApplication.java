@@ -12,8 +12,8 @@ public class MyApplication extends Application {
         Realm.init(this);
         RealmConfiguration realmConfig = new RealmConfiguration.Builder()
                 .name("login.realm")
-                .schemaVersion(1)
-                .migration(new Migration())
+                .schemaVersion(2)
+                .deleteRealmIfMigrationNeeded()
                 .build();
         Realm.setDefaultConfiguration(realmConfig);
     }
