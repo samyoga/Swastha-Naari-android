@@ -35,7 +35,7 @@
         android:id="@+id/text3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="हामी सबैको जिम्मेवारी "
+        android:text="सबैको जिम्मेवारी "
         android:fontFamily="sans-serif"
         android:textStyle="bold"
         android:layout_marginTop="20dp"

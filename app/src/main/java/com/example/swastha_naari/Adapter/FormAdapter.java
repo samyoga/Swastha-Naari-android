@@ -36,6 +36,11 @@ public class FormAdapter extends RecyclerView.Adapter<FormAdapter.ViewHolder> {
     public void onBindViewHolder(@NonNull FormAdapter.ViewHolder holder, final int position) {
         holder.mName.setText(arrayList.get(position).getName());
         holder.mAge.setText(arrayList.get(position).getAge());
+        holder.mGuardianName.setText(arrayList.get(position).getGuardianName());
+        holder.mBloodPressure.setText(arrayList.get(position).getBloodPressure());
+        holder.mWeight.setText(arrayList.get(position).getWeight());
+        holder.mHistory.setText(arrayList.get(position).getHistory());
+        holder.mOtherMedicalReport.setText(arrayList.get(position).getMedicalReport());
     }
 
     @Override
@@ -45,15 +50,18 @@ public class FormAdapter extends RecyclerView.Adapter<FormAdapter.ViewHolder> {
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView mName;
-        TextView mAge;
-
+        TextView mName, mAge, mGuardianName, mBloodPressure, mWeight, mHistory, mOtherMedicalReport;
 
         public ViewHolder(View view) {
             super(view);
 
             mName = view.findViewById(R.id.cvName);
             mAge = view.findViewById(R.id.cvAge);
+            mGuardianName = view.findViewById(R.id.cvGuardianName);
+            mBloodPressure = view.findViewById(R.id.cvBloodPressure);
+            mWeight = view.findViewById(R.id.cvWeight);
+            mHistory = view.findViewById(R.id.cvHistory);
+            mOtherMedicalReport = view.findViewById(R.id.cvOtherMedicalReport);
         }
     }
 }

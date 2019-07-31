@@ -68,6 +68,5 @@ public class ViewDataActivity extends AppCompatActivity {
         super.onDestroy();
         realm.removeChangeListener(realmChangeListener);
         realm.close();
-        Realm.deleteRealm(realm.getConfiguration());
     }
 }

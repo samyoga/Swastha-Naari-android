@@ -84,9 +84,10 @@ public class DataCollectActivity extends AppCompatActivity {
         formModel.setWeight(Weight);
         formModel.setHistory(History);
         formModel.setMedicalReport(MedicalReport);
+        realm.deleteAll();
         realm.commitTransaction();
 
-        Intent intent = new Intent(DataCollectActivity.this, ViewDataActivity.class);
+        Intent intent = new Intent(DataCollectActivity.this, MainActivity.class);
         startActivity(intent);
     }
 
@@ -94,6 +95,5 @@ public class DataCollectActivity extends AppCompatActivity {
     protected void onDestroy(){
         super.onDestroy();
         realm.close();
-        Realm.deleteRealm(realm.getConfiguration());
     }
 }

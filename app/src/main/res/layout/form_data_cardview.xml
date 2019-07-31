@@ -29,19 +29,80 @@
             android:layout_marginLeft="10dp"
             android:textColor="@color/colorDark"
             android:textStyle="bold"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:layout_marginStart="10dp" />
 
         <TextView
             android:id="@+id/cvAge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/cvName"
             android:layout_marginLeft="10dp"
+            android:layout_marginTop="16dp"
             android:textColor="@color/colorDark"
             android:textStyle="bold"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:layout_marginStart="10dp" />
 
+        <TextView
+            android:id="@+id/cvGuardianName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/cvAge"
+            android:textColor="@color/colorDark"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginStart="10dp" />
 
+        <TextView
+            android:id="@+id/cvBloodPressure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/cvGuardianName"
+            android:textColor="@color/colorDark"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginStart="10dp" />
 
+        <TextView
+            android:id="@+id/cvWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/cvBloodPressure"
+            android:textColor="@color/colorDark"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginStart="10dp" />
+
+        <TextView
+            android:id="@+id/cvHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/cvWeight"
+            android:textColor="@color/colorDark"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginStart="10dp" />
+
+        <TextView
+            android:id="@+id/cvOtherMedicalReport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/cvHistory"
+            android:textColor="@color/colorDark"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginStart="10dp" />
 
     </RelativeLayout>
 </androidx.cardview.widget.CardView>
