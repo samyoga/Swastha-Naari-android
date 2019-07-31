@@ -6,6 +6,11 @@
     <string name="guardianname">अभिभावकको नाम</string>
     <string name="bloodpressure">रक्तचाप</string>
     <string name="weight">तौल</string>
+    <string name="firstPregancyage">पहिलो गर्भावस्था उमेर</string>
+    <string name="Child">सन्तानको सङ्ख्या</string>
+    <string name="menopause">रजोनिवृत्ति</string>
+    <string name="birthSpacing">दुई सन्तान बिचको जन्म दूरी</string>
+    <string name="mensGap">रजस्वाला अन्तराल</string>
     <string name="history">पहिला भएको समस्या</string>
     <string name="otherreport">अन्य रोग वा सोही जाँचको विवरण</string>
 </resources>

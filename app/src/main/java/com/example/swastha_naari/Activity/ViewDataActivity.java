@@ -1,5 +1,6 @@
 package com.example.swastha_naari.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,6 +27,7 @@ public class ViewDataActivity extends AppCompatActivity {
 
     @BindView(R.id.rv)
     RecyclerView recyclerView;
+    String name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +45,13 @@ public class ViewDataActivity extends AppCompatActivity {
         RealmResults<FormModel> realmResults = realm.where(FormModel.class).findAllAsync();
         for (FormModel formModel:realmResults){
             list.add(formModel);
+        }
+
+        Intent intent = getIntent();
+        if (null != intent) {
+            name = getIntent().getStringExtra("name");
+//            section = getIntent().getExtras().getString("section");
+
         }
 
         FormAdapter formAdapter = new FormAdapter(this, list);

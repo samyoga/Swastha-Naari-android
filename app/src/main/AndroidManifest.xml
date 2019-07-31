@@ -10,7 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity.DatabyUsernameActivity"></activity>
+        <activity android:name=".Activity.DatabyUsernameActivity" />
         <activity android:name=".Activity.ViewDataActivity" />
         <activity android:name=".Activity.DataCollectActivity" />
         <activity android:name=".Activity.MainActivity">

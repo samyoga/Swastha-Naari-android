@@ -13,6 +13,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.swastha_naari.Models.FormModel;
 import com.example.swastha_naari.R;
 
+import java.util.UUID;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.realm.Realm;
@@ -35,6 +37,21 @@ public class DataCollectActivity extends AppCompatActivity {
 
     @BindView(R.id.EditTextWeight)
     EditText weight;
+
+    @BindView(R.id.EditTextPregnancyAge)
+    EditText firstPregnancyAge;
+
+    @BindView(R.id.EditTextNumChild)
+    EditText childNumber;
+
+    @BindView(R.id.EditTextMenopause)
+    EditText menopause;
+
+    @BindView(R.id.EditTextBirthSpacing)
+    EditText birthSpacing;
+
+    @BindView(R.id.EditTextMensGap)
+    EditText menstrualGap;
 
     @BindView(R.id.EditTextHistory)
     EditText history;
@@ -72,18 +89,29 @@ public class DataCollectActivity extends AppCompatActivity {
         String GuardianName = guardianName.getText().toString();
         String BloodPressure = bloodPressure.getText().toString();
         String Weight = weight.getText().toString();
+        String FirstPregnancyAge = firstPregnancyAge.getText().toString();
+        String ChildNumber = childNumber.getText().toString();
+        String Menopause = menopause.getText().toString();
+        String BirthSpacing = birthSpacing.getText().toString();
+        String MensGap = menstrualGap.getText().toString();
         String History = history.getText().toString();
         String MedicalReport = otherMedicalReport.getText().toString();
 
         realm.beginTransaction();
-        FormModel formModel = realm.createObject(FormModel.class);
+        FormModel formModel = realm.createObject(FormModel.class, UUID.randomUUID().toString());
         formModel.setName(Name);
         formModel.setAge(Age);
         formModel.setGuardianName(GuardianName);
         formModel.setBloodPressure(BloodPressure);
         formModel.setWeight(Weight);
+        formModel.setFirstPregnancyAge(FirstPregnancyAge);
+        formModel.setChildNumber(ChildNumber);
+        formModel.setMenopauseAge(Menopause);
+        formModel.setBirthSpacing(BirthSpacing);
+        formModel.setMenstrualInterval(MensGap);
         formModel.setHistory(History);
         formModel.setMedicalReport(MedicalReport);
+//        realm.deleteAll();
         realm.commitTransaction();
 
         Intent intent = new Intent(DataCollectActivity.this, MainActivity.class);

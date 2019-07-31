@@ -183,6 +183,151 @@
             android:background="@drawable/border"/>
 
         <TextView
+            android:id="@+id/firstPregnancyAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/EditTextWeight"
+            android:layout_marginTop="40dp"
+            android:text="Age at first pregnancy"
+            android:textStyle="bold"
+            android:textSize="8pt"
+            android:textColor="@color/colorDark"
+            android:layout_marginLeft="8pt"/>
+
+        <EditText
+            android:id="@+id/EditTextPregnancyAge"
+            android:hint="@string/firstPregancyage"
+            android:inputType="number"
+            android:layout_width="320dp"
+            android:layout_gravity="center"
+            android:layout_height="46dp"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/firstPregnancyAge"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:paddingStart="20dp"
+            android:paddingLeft="6dp"
+            android:background="@drawable/border"/>
+
+        <TextView
+            android:id="@+id/NumChildren"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/EditTextPregnancyAge"
+            android:layout_marginTop="40dp"
+            android:text="Number of children"
+            android:textStyle="bold"
+            android:textSize="8pt"
+            android:textColor="@color/colorDark"
+            android:layout_marginLeft="8pt"/>
+
+        <EditText
+            android:id="@+id/EditTextNumChild"
+            android:hint="@string/Child"
+            android:inputType="number"
+            android:layout_width="320dp"
+            android:layout_gravity="center"
+            android:layout_height="46dp"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/NumChildren"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:paddingStart="20dp"
+            android:paddingLeft="6dp"
+            android:background="@drawable/border"/>
+
+        <TextView
+            android:id="@+id/ageOfMenopause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/EditTextNumChild"
+            android:layout_marginTop="40dp"
+            android:text="Age of menopause"
+            android:textStyle="bold"
+            android:textSize="8pt"
+            android:textColor="@color/colorDark"
+            android:layout_marginLeft="8pt"/>
+
+        <EditText
+            android:id="@+id/EditTextMenopause"
+            android:hint="@string/menopause"
+            android:inputType="number"
+            android:layout_width="320dp"
+            android:layout_gravity="center"
+            android:layout_height="46dp"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/ageOfMenopause"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:paddingStart="20dp"
+            android:paddingLeft="6dp"
+            android:background="@drawable/border"/>
+
+        <TextView
+            android:id="@+id/birthSpacing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/EditTextMenopause"
+            android:layout_marginTop="40dp"
+            android:text="Birth spacing"
+            android:textStyle="bold"
+            android:textSize="8pt"
+            android:textColor="@color/colorDark"
+            android:layout_marginLeft="8pt"/>
+
+        <EditText
+            android:id="@+id/EditTextBirthSpacing"
+            android:hint="@string/birthSpacing"
+            android:inputType="number"
+            android:layout_width="320dp"
+            android:layout_gravity="center"
+            android:layout_height="46dp"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/birthSpacing"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:paddingStart="20dp"
+            android:paddingLeft="6dp"
+            android:background="@drawable/border"/>
+
+        <TextView
+            android:id="@+id/mensGap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/EditTextBirthSpacing"
+            android:layout_marginTop="40dp"
+            android:text="Mestruation interval"
+            android:textStyle="bold"
+            android:textSize="8pt"
+            android:textColor="@color/colorDark"
+            android:layout_marginLeft="8pt"/>
+
+        <EditText
+            android:id="@+id/EditTextMensGap"
+            android:hint="@string/mensGap"
+            android:inputType="number"
+            android:layout_width="320dp"
+            android:layout_gravity="center"
+            android:layout_height="46dp"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/mensGap"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:paddingStart="20dp"
+            android:paddingLeft="6dp"
+            android:background="@drawable/border"/>
+
+        <TextView
             android:id="@+id/historyofreport"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

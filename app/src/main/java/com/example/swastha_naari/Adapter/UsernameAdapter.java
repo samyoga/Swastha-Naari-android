@@ -2,6 +2,7 @@ package com.example.swastha_naari.Adapter;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.swastha_naari.Activity.ViewDataActivity;
 import com.example.swastha_naari.Models.FormModel;
 import com.example.swastha_naari.R;
 
@@ -41,6 +43,17 @@ public class UsernameAdapter extends RecyclerView.Adapter<UsernameAdapter.ViewHo
     public void onBindViewHolder(@NonNull UsernameAdapter.ViewHolder holder, final int position) {
         holder.mName.setText("Record of" + " "+ arrayList.get(position).getName());
 //        holder.mAge.setVisibility(View.GONE);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), ViewDataActivity.class);
+                intent.putExtra("name", arrayList.get(position).getName());
+                intent.putExtra("age", arrayList.get(position).getAge());
+                intent.putExtra("age", arrayList.get(position).getGuardianName());
+                view.getContext().startActivity(intent);
+            }
+        });
     }
 
     @Override
