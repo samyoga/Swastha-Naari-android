@@ -42,7 +42,7 @@ public class UsernameAdapter extends RecyclerView.Adapter<UsernameAdapter.ViewHo
     @Override
     public void onBindViewHolder(@NonNull UsernameAdapter.ViewHolder holder, final int position) {
         holder.mName.setText("Record of" + " "+ arrayList.get(position).getName());
-//        holder.mAge.setVisibility(View.GONE);
+
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

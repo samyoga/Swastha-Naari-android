@@ -37,6 +37,7 @@ public class FormAdapter extends RecyclerView.Adapter<FormAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull FormAdapter.ViewHolder holder, final int position) {
 //        holder.username.setText("Record: "  + arrayList.get(position).getName() );
+
         holder.mName.setText(arrayList.get(position).getName());
         holder.mAge.setText(arrayList.get(position).getAge());
         holder.mGuardianName.setText(arrayList.get(position).getGuardianName());
