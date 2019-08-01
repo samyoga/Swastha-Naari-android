@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,6 +16,9 @@ public class MainActivity extends AppCompatActivity {
 
     private Button formButton;
     private Button report;
+    TextView logout;
+
+    SharedPreferences loggedIn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +27,14 @@ public class MainActivity extends AppCompatActivity {
 
         formButton = (Button) findViewById(R.id.form);
         report = (Button) findViewById(R.id.report);
+        logout = (TextView) findViewById(R.id.logout);
+
+//        loggedIn = getSharedPreferences("logged_in", MODE_PRIVATE);
+//        if (loggedIn.getBoolean("loggedIn", true)){
+//            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+//            startActivity(intent);
+//        }
+
 
 //        SharedPreferences loggedIn = getSharedPreferences("logged_in", MODE_PRIVATE);
 ////        String loginValue = loggedIn.getString("username", "");
@@ -46,6 +58,18 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     Intent intent = new Intent(MainActivity.this, DatabyUsernameActivity.class);
+                    startActivity(intent);
+                }
+            });
+
+            logout.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    loggedIn = getSharedPreferences("logged_in", MODE_PRIVATE);
+                    SharedPreferences.Editor editor = loggedIn.edit();
+                    editor.clear();
+                    editor.commit();
+                    Intent intent = new Intent(MainActivity.this, LoginActivity.class);
                     startActivity(intent);
                 }
             });

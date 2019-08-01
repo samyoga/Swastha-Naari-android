@@ -36,8 +36,8 @@ public class LoginActivity extends AppCompatActivity {
     @BindView(R.id.login)
     Button loginBtn;
 
-    @BindView(R.id.log)
-    TextView log;
+//    @BindView(R.id.log)
+//    TextView log;
 
     @BindView(R.id.signUp)
     TextView signUpLink;
