@@ -1,7 +1,9 @@
 package com.example.swastha_naari.Activity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -22,22 +24,31 @@ public class MainActivity extends AppCompatActivity {
         formButton = (Button) findViewById(R.id.form);
         report = (Button) findViewById(R.id.report);
 
-        formButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+//        SharedPreferences loggedIn = getSharedPreferences("logged_in", MODE_PRIVATE);
+////        String loginValue = loggedIn.getString("username", "");
+//        Boolean loginValue = loggedIn.getBoolean("loggedIn", true);
+//        Log.d("usernameLogIn", String.valueOf(loginValue));
+//        if (loginValue == false) {
+//            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+//            startActivity(intent);
+//        }
 
-                Intent intent = new Intent(MainActivity.this, DataCollectActivity.class);
-                startActivity(intent);
-            }
-        });
+            formButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
 
-        report.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, DatabyUsernameActivity.class);
-                startActivity(intent);
-            }
-        });
+                    Intent intent = new Intent(MainActivity.this, DataCollectActivity.class);
+                    startActivity(intent);
+                }
+            });
+
+            report.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(MainActivity.this, DatabyUsernameActivity.class);
+                    startActivity(intent);
+                }
+            });
 
     }
 }

@@ -42,6 +42,8 @@ public class SignUpActivity extends AppCompatActivity {
     Realm realm;
     private Login userDetails;
 
+    Boolean loggedIn = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -115,7 +117,7 @@ public class SignUpActivity extends AppCompatActivity {
     public void onSignupSuccess() {
         signUpBtn.setEnabled(true);
         setResult(RESULT_OK, null);
-
+        loggedIn = true;
         Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
         startActivity(intent);
 //        finish();

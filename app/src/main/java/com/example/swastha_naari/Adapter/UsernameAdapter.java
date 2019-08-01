@@ -36,7 +36,7 @@ public class UsernameAdapter extends RecyclerView.Adapter<UsernameAdapter.ViewHo
     @NonNull
     @Override
     public UsernameAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new ViewHolder(LayoutInflater.from(context).inflate(R.layout.form_data_cardview, parent, false));
+        return new ViewHolder(LayoutInflater.from(context).inflate(R.layout.username_cardview, parent, false));
     }
 
     @Override
@@ -49,8 +49,18 @@ public class UsernameAdapter extends RecyclerView.Adapter<UsernameAdapter.ViewHo
             public void onClick(View view) {
                 Intent intent = new Intent(view.getContext(), ViewDataActivity.class);
                 intent.putExtra("name", arrayList.get(position).getName());
-                intent.putExtra("age", arrayList.get(position).getAge());
-                intent.putExtra("age", arrayList.get(position).getGuardianName());
+//                intent.putExtra("age", arrayList.get(position).getAge());
+                intent.putExtra("id", arrayList.get(position).getId());
+//                intent.putExtra("guardianName", arrayList.get(position).getGuardianName());
+//                intent.putExtra("bloodPressure", arrayList.get(position).getBloodPressure());
+//                intent.putExtra("weight", arrayList.get(position).getWeight());
+//                intent.putExtra("firstPregnancyAge", arrayList.get(position).getFirstPregnancyAge());
+//                intent.putExtra("childNumber", arrayList.get(position).getChildNumber());
+//                intent.putExtra("menopauseAge", arrayList.get(position).getMenopauseAge());
+//                intent.putExtra("birthSpacing", arrayList.get(position).getBirthSpacing());
+//                intent.putExtra("mensGap", arrayList.get(position).getMenstrualInterval());
+//                intent.putExtra("history", arrayList.get(position).getHistory());
+//                intent.putExtra("medicalReport", arrayList.get(position).getMedicalReport());
                 view.getContext().startActivity(intent);
             }
         });

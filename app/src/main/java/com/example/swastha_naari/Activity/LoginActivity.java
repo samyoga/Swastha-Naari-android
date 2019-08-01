@@ -3,7 +3,9 @@ package com.example.swastha_naari.Activity;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -41,12 +43,22 @@ public class LoginActivity extends AppCompatActivity {
     TextView signUpLink;
 
     Realm realm;
+    Boolean loginbool;
+
+    public static SharedPreferences loggedIn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
+//        sharedPreferences = this.getPreferences(Context.MODE_PRIVATE);
+
+        loggedIn = getSharedPreferences("logged_in", MODE_PRIVATE);
+        if (loggedIn.getBoolean("loggedIn", false)){
+            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            startActivity(intent);
+        }
 
         Realm.init(this);
         realm = Realm.getDefaultInstance();
@@ -118,6 +130,13 @@ public class LoginActivity extends AppCompatActivity {
             if (username.equals(login.getUsername()) && password.equals(login.getPassword())) {
                 Log.e(TAG, login.getUsername());
                 Toast.makeText(getApplicationContext(), "Login successful", Toast.LENGTH_SHORT).show();
+
+
+                SharedPreferences.Editor editor = loggedIn.edit();
+                editor.putBoolean("loggedIn", true);
+//                editor.putString("username", login.getUsername());
+                editor.apply();
+
                 Intent intent=new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(intent);
             }else {
@@ -157,6 +176,12 @@ public class LoginActivity extends AppCompatActivity {
 
     public void onLoginSuccess() {
         loginBtn.setEnabled(true);
+        loginbool = true;
+//        SharedPreferences loggedIn = getSharedPreferences("logged_in", MODE_PRIVATE);
+//        SharedPreferences.Editor editor = loggedIn.edit();
+//        editor.putBoolean("loggedIn", loginbool);
+//        editor.apply();
+
         finish();
     }
 

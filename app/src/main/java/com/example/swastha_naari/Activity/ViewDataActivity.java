@@ -69,7 +69,7 @@ public class ViewDataActivity extends AppCompatActivity {
 //    @BindView(R.id.cvOtherMedicalReport)
 //    TextView otherMedicalReport;
 
-    String name;
+    String name, id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -104,16 +104,20 @@ public class ViewDataActivity extends AppCompatActivity {
 //        }
 
         RealmResults<FormModel> realmResults = realm.where(FormModel.class).findAllAsync();
-        for (FormModel formModel: realmResults){
+//        for (FormModel formModel: realmResults){
 //
-           list.add(getFormModel(formModel.getId()));
-           Log.d("id", formModel.getId());
+
+//           Log.d("nancy", formModel.getId());
+//        Log.d("nancy", "onCreate: " + list.size() + "second" + getFormModel(id));
 ////            list.add(formModel);
-        }
+//        }
 
         Intent intent = getIntent();
         if (null != intent) {
             name = getIntent().getStringExtra("name");
+            id = getIntent().getStringExtra("id");
+            Log.d("nancy", "onCreate: "+id);
+            list.add(getFormModel(id));
         }
 
 
@@ -124,11 +128,11 @@ public class ViewDataActivity extends AppCompatActivity {
         refresh();
     }
 
-    public FormModel getFormModel(String id){
+    public FormModel getFormModel(String id) {
         return realm.where(FormModel.class).equalTo("id", id).findFirst();
     }
 
-    private void refresh(){
+    private void refresh() {
         realmChangeListener = new RealmChangeListener() {
             @Override
             public void onChange(Object o) {
@@ -140,7 +144,7 @@ public class ViewDataActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onDestroy(){
+    protected void onDestroy() {
         super.onDestroy();
         realm.removeChangeListener(realmChangeListener);
         realm.close();
